@@ -35,14 +35,7 @@ module.exports = {
             './Component': './apps/remote/src/app/remote-entry/entry.component.ts',
         },
 
-        // For hosts (please adjust)
-        // remotes: {
-        //     "anamisheWorkspace": "http://localhost:4200/remoteEntry.js",
-        //     "host": "http://localhost:4200/remoteEntry.js",
-
-        // },
-
-        shared: share({
+      shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
