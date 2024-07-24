@@ -26,31 +26,20 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-        library: { type: "module" },
+      library: { type: 'module' },
 
-        // For remotes (please adjust)
-        // name: "shell",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './apps/shell/src/app/app.component.ts',
-        // },
+      // For hosts (please adjust)
+      remotes: {
+        'mfe1': 'http://localhost:4301/remoteEntry.js'
+      },
 
-        // For hosts (please adjust)
-        remotes: {
-            // "anamisheWorkspace": "http://localhost:4200/remoteEntry.js",
-            // "host": "http://localhost:4200/remoteEntry.js",
-            "mfe1": "http://localhost:4301/remoteEntry.js",
-            // "remote": "http://localhost:4201/remoteEntry.js",
+      shared: share({
+        '@angular/core': { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        '@angular/common': { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        '@angular/common/http': { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        '@angular/router': { singleton: true, strictVersion: true, requiredVersion: 'auto' },
 
-        },
-
-        shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-
-          ...sharedMappings.getDescriptors()
+        ...sharedMappings.getDescriptors()
         })
 
     }),
