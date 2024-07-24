@@ -33,17 +33,8 @@ module.exports = {
         filename: "remoteEntry.js",
         exposes: {
             './Module': './apps/mfe1/src/app/booking/booking.module.ts',
-            './Component': './apps/mfe1/src/app/booking/booking-search/booking.component.ts',
+          //  './Component': './apps/mfe1/src/app/booking/booking-search/booking.component.ts', // component can be exposed
         },
-
-        // For hosts (please adjust)
-        // remotes: {
-        //     "anamisheWorkspace": "http://localhost:4200/remoteEntry.js",
-        //     "host": "http://localhost:4200/remoteEntry.js",
-        //     "remote": "http://localhost:4201/remoteEntry.js",
-        //     "shell": "http://localhost:4200/remoteEntry.js",
-
-        // },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
