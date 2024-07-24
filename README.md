@@ -25,6 +25,10 @@ Clone the repository:
 
 ``cd <repository-folder>``
 
+`` git checkout develop ``
+
+`` npm install ``
+
 ## Build application
 
 - Build Micro Frontend App
