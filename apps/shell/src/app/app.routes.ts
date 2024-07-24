@@ -6,5 +6,13 @@ export const appRoutes: Routes= [
         path: '',
         component: HomeComponent,
         pathMatch: 'full',
-      },
+    },
+    // {
+    //   path: 'booking',
+    //   loadChildren: () => import('mfe1/Module').then((m) => m.BookingModule),
+    // },
+    {
+      path: 'booking',
+      loadComponent: () => import('mfe1/Component').then((m) => m.BookingComponent),
+    },
 ];

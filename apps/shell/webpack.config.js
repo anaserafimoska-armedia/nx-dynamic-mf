@@ -36,13 +36,13 @@ module.exports = {
         // },
 
         // For hosts (please adjust)
-        // remotes: {
-        //     "anamisheWorkspace": "http://localhost:4200/remoteEntry.js",
-        //     "host": "http://localhost:4200/remoteEntry.js",
-        //     "mfe1": "http://localhost:4301/remoteEntry.js",
-        //     "remote": "http://localhost:4201/remoteEntry.js",
+        remotes: {
+            // "anamisheWorkspace": "http://localhost:4200/remoteEntry.js",
+            // "host": "http://localhost:4200/remoteEntry.js",
+            "mfe1": "http://localhost:4301/remoteEntry.js",
+            // "remote": "http://localhost:4201/remoteEntry.js",
 
-        // },
+        },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },

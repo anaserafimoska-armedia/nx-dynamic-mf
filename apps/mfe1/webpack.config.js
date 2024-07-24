@@ -28,12 +28,13 @@ module.exports = {
     new ModuleFederationPlugin({
         library: { type: "module" },
 
-        // For remotes (please adjust)
-        // name: "mfe1",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './apps/mfe1/src/app/app.component.ts',
-        // },
+      //  For remotes (please adjust)
+        name: "mfe1",
+        filename: "remoteEntry.js",
+        exposes: {
+            './Module': './apps/mfe1/src/app/booking/booking.module.ts',
+            './Component': './apps/mfe1/src/app/booking/booking-search/booking.component.ts',
+        },
 
         // For hosts (please adjust)
         // remotes: {
