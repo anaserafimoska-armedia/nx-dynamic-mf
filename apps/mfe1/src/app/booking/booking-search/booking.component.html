@@ -1,0 +1,33 @@
+<style>
+    input[type=text] {
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid silver;
+      font-size: 20px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    #container {
+      border: 2px darkred dashed;
+      padding: 20px;
+    }
+  </style>
+  <br>
+  <div id='container'>
+    <h1>Booking</h1>
+    <div>
+      <input type='text' placeholder='Booking details'>
+    </div>
+    <div>
+      <input type='text' placeholder='Check in'>
+    </div>
+    <div>
+      <input type='text' placeholder='Check out'>
+    </div>
+    <div>
+      <ng-container #vc></ng-container>
+    </div>
+  </div>

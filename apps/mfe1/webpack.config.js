@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "remote",
+    uniqueName: "mfe1",
     publicPath: "auto"
   },
   optimization: {
@@ -28,14 +28,15 @@ module.exports = {
     new ModuleFederationPlugin({
         library: { type: "module" },
 
-        // For remotes (please adjust)
-        name: "remote",
+      //  For remotes (please adjust)
+        name: "mfe1",
         filename: "remoteEntry.js",
         exposes: {
-            './Component': './apps/remote/src/app/remote-entry/entry.component.ts',
+            './Module': './apps/mfe1/src/app/booking/booking.module.ts',
+          //  './Component': './apps/mfe1/src/app/booking/booking-search/booking.component.ts', // component can be exposed
         },
 
-      shared: share({
+        shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },

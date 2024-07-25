@@ -28,18 +28,9 @@ module.exports = {
     new ModuleFederationPlugin({
         library: { type: "module" },
 
-        // For remotes (please adjust)
-        // name: "host",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './apps/host/src/app/app.component.ts',
-        // },
-
         // For hosts (please adjust)
         remotes: {
-           // "anamisheWorkspace": "http://localhost:4200/remoteEntry.js",
             "remote": "http://localhost:4201/remoteEntry.js",
-
         },
 
         shared: share({
